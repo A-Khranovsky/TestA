@@ -2,7 +2,9 @@
 
 namespace App\Services\TestaRestApiEngine;
 
-interface TestaResApiEngineinterface
-{
+use Illuminate\Http\Request;
 
+interface TestaRestApiEngineinterface
+{
+    public function getLocation(Request $request);
 }

@@ -2,7 +2,13 @@
 
 namespace App\Services\TestaRestApiEngine;
 
-class TestaResApiEngine implements TestaResApiEngineinterface
+use Illuminate\Http\Request;
+
+class TestaRestApiEngine implements TestaRestApiEngineinterface
 {
+    public function getLocation($request)
+    {
+        return [$request->longitude, $request->latitude ];
+    }
 
 }
