@@ -19,6 +19,11 @@ class GeoCodingRestApiEngine implements GeocodingRestApiEngineinterface
 
     public function getLocation($longitude, $latitude)
     {
+        $params = [
+            'latlng' =>$latitude.','.$longitude,
+            'key' => $this->api_key
+        ];
 
+        return file_get_contents($this->url . $this->accept.'?' . http_build_query($params));
     }
 }
