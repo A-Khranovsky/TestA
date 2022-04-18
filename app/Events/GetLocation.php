@@ -14,23 +14,11 @@ class GetLocation
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * Create a new event instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $longitude;
+    public $latitude;
+    public function __construct($longitude, $latitude)
     {
-        //
-    }
-
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return \Illuminate\Broadcasting\Channel|array
-     */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
+        $this->longitude = $longitude;
+        $this->latitude = $latitude;
     }
 }
