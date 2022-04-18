@@ -16,6 +16,7 @@ class GetLocation
 
     public $longitude;
     public $latitude;
+
     public function __construct($longitude, $latitude)
     {
         $this->longitude = $longitude;
