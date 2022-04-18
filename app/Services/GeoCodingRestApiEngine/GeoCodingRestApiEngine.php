@@ -17,13 +17,13 @@ class GeoCodingRestApiEngine implements GeocodingRestApiEngineinterface
         $this->api_key = $api_key;
     }
 
-    public function getLocation($longitude, $latitude)
+    public function getLocationData($longitude, $latitude)
     {
         $params = [
             'latlng' =>$latitude.','.$longitude,
             'key' => $this->api_key
         ];
 
-        return file_get_contents($this->url . $this->accept.'?' . http_build_query($params));
+        return json_decode(file_get_contents($this->url . $this->accept.'?' . http_build_query($params)),true);
     }
 }

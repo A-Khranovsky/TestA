@@ -6,5 +6,5 @@ namespace App\Services\GeoCodingRestApiEngine;
 
 interface GeocodingRestApiEngineinterface
 {
-    public function getLocation($longitude, $latitude);
+    public function getLocationData($longitude, $latitude);
 }
