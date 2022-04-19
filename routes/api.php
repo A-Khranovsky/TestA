@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/getLocation', [TestaController::class, 'getLocation']);
 Route::get('/getRecords', [TestaController::class, 'getRecords']);
+Route::get('/region/{id}', [TestaController::class, 'getRecordsByRegionId']);
