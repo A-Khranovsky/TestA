@@ -22,8 +22,6 @@ class TestaController extends Controller
 
     public function getRecords(DBEngineinterface $DBEngine)
     {
-//        $adr = Address::first();
-//        return $adr->region;
-        return new AddressesCollection(Address::all());
+        return AddressesCollection::collection(Address::all());
     }
 }

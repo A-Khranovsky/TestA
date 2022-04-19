@@ -13,7 +13,8 @@ class AddressesCollection extends JsonResource
             'latitude' => $this->latitude,
             'longitude' => $this->longitude,
             'name' => $this->name,
-            'region' => RegionsCollection::collection($this->region)
+            'region' => RegionsCollection::collection($this->region()->get()),
+            'city' => CitiesCollection::collection($this->region->cities()->get())
         ];
     }
 }

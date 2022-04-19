@@ -11,7 +11,6 @@ class CitiesCollection extends JsonResource
         return [
             'long_name'=> $this->long_name,
             'short_name'=> $this->short_name,
-            'region' => ''
         ];
     }
 }
