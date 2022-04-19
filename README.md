@@ -1,6 +1,6 @@
 ```
-App recives a post, get requests with geografical coordinates, redrects
-them to Google Geocodding app and responses with human format of geografical
+App is accepts a post, get requests with geografical coordinates, redrects
+them to Google Geocoding app and responses with human format of geografical
 location. App writes handled info to the DB and can outputs it using region id or 
 all stored info.
 ```
