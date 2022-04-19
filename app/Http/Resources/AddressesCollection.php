@@ -14,7 +14,8 @@ class AddressesCollection extends JsonResource
             'longitude' => $this->longitude,
             'name' => $this->name,
             'region' => RegionsCollection::collection($this->region()->get()),
-            'city' => CitiesCollection::collection($this->region->cities()->get())
+            'city' => CitiesCollection::collection($this->region->cities()->get()),
+            'plus_code' => PluscodesCollection::collection($this->pluscode()->get())
         ];
     }
 }

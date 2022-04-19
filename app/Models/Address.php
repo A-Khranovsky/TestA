@@ -20,7 +20,7 @@ class Address extends Model
         return $this->belongsTo(Region::class);
     }
 
-    public function pluscodes()
+    public function pluscode()
     {
         return $this->belongsTo(Pluscode::class);
     }
