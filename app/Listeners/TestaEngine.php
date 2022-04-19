@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use App\Events\GetLocation;
 use App\Services\GeoCodingRestApiEngine\GeocodingRestApiEngineinterface;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Response;
 use Illuminate\Queue\InteractsWithQueue;
 
 class TestaEngine
@@ -18,8 +18,10 @@ class TestaEngine
 
     public function handleGetLocation($event)
     {
+//        echo response()->json($this->geocodingRestApiEngine
+//            ->getLocationData($event->longitude, $event->latitude));
         //return 'rr';
-
+       //response('www', 200);
 //        ->json($this->geocodingRestApiEngine
 //            ->getLocationData($event->longitude, $event->latitude), 200);
     }
