@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->string('locality');
+            $table->string('administrative_area_level_3');
             $table->timestamps();
         });
     }
