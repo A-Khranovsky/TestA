@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\LocationController;
+use App\Http\Controllers\Api\TestaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/getLocation', [LocationController::class, 'get']);
+Route::post('/getLocation', [TestaController::class, 'getLocation']);
+Route::get('/getRecords', [TestaController::class, 'getRecords']);
