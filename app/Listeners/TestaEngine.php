@@ -18,11 +18,7 @@ class TestaEngine
 
     public function handleGetLocation($event)
     {
-//        echo response()->json($this->geocodingRestApiEngine
-//            ->getLocationData($event->longitude, $event->latitude));
-        //return 'rr';
-       //response('www', 200);
-//        ->json($this->geocodingRestApiEngine
+//        $this->geocodingRestApiEngine
 //            ->getLocationData($event->longitude, $event->latitude), 200);
     }
 
