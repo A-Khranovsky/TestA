@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGeodatasTable extends Migration
+class CreateAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateGeodatasTable extends Migration
      */
     public function up()
     {
-        Schema::create('geodatas', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('tatitude');
             $table->string('tongitude');
-            $table->string('address');
+            $table->string('name');
+            $table->foreignId('region_id')->nullable();
+            $table->foreign('region_id')->references('id')->on('regions')->cascadeOnDelete();
+            $table->foreignId('pluscode_id')->nullable();
+            $table->foreign('pluscode_id')->references('id')->on('pluscodes')->cascadeOnDelete();
             $table->timestamps();
         });
     }

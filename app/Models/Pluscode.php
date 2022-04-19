@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Geodata extends Model
+class Pluscode extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'compound_code',
+        'global_code',
+    ];
 }
