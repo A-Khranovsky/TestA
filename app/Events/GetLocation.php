@@ -12,8 +12,6 @@ use Illuminate\Queue\SerializesModels;
 
 class GetLocation
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
-
     public $longitude;
     public $latitude;
 

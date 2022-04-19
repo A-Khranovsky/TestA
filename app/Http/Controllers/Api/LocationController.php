@@ -11,6 +11,7 @@ class LocationController extends Controller
 {
     public function get(Request $request)
     {
-        event(new GetLocation($request->longitude, $request->latitude));
+        //event(new GetLocation($request->longitude, $request->latitude));
+        return response('www', 200);
     }
 }
