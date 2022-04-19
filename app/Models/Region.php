@@ -12,12 +12,15 @@ class Region extends Model
     protected $fillable = [
         'long_name',
         'short_name',
-//        'locality',
-//        'sublocality',
-//        'postal_code',
-//        'country',
-//        'administrative_area_level_1',
-//        'administrative_area_level_2',
-//        'name',
     ];
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
+    }
 }

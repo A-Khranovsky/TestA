@@ -13,4 +13,9 @@ class City extends Model
         'long_name',
         'short_name',
     ];
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
 }

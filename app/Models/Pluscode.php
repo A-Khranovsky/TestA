@@ -13,4 +13,9 @@ class Pluscode extends Model
         'compound_code',
         'global_code',
     ];
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
 }

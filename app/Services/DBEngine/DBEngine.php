@@ -117,4 +117,9 @@ class DBEngine implements DBEngineinterface
             }
         }
     }
+
+    public function getAllRecords()
+    {
+
+    }
 }

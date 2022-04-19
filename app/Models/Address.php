@@ -14,4 +14,14 @@ class Address extends Model
         'longitude',
         'name',
     ];
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+    public function pluscodes()
+    {
+        return $this->belongsTo(Pluscode::class);
+    }
 }
