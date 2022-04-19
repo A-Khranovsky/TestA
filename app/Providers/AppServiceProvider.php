@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Services\DBEngine\DBEngine;
+use App\Services\DBEngine\DBEngineinterface;
 use App\Services\GeoCodingRestApiEngine\GeoCodingRestApiEngine;
 use App\Services\GeoCodingRestApiEngine\GeocodingRestApiEngineinterface;
 use Illuminate\Support\ServiceProvider;
@@ -22,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
              'json',
              'AIzaSyDFCFhb1JgbGK5dbwdAcJbYE4rpnbDDRDI'
             );
+        });
+
+        $this->app->singleton(DBEngineinterface::class, function () {
+            return new DBEngine;
         });
     }
 

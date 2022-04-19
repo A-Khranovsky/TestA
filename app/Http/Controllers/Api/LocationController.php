@@ -13,7 +13,7 @@ class LocationController extends Controller
     public function get(Request $request, GeocodingRestApiEngineinterface $geocodingRestApiEngine)
     {
         event(new GetLocation($request->latitude, $request->longitude));
-        return response($geocodingRestApiEngine
-            ->getLocationData($request->latitude, $request->longitude), 200);
+//        return response($geocodingRestApiEngine
+//            ->getLocationData($request->latitude, $request->longitude), 200);
     }
 }

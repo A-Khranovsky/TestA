@@ -10,12 +10,14 @@ class Region extends Model
     use HasFactory;
 
     protected $fillable = [
-        'locality',
-        'sublocality',
-        'postal_code',
-        'country',
-        'administrative_area_level_1',
-        'administrative_area_level_2',
-        'name',
+        'long_name',
+        'short_name',
+//        'locality',
+//        'sublocality',
+//        'postal_code',
+//        'country',
+//        'administrative_area_level_1',
+//        'administrative_area_level_2',
+//        'name',
     ];
 }

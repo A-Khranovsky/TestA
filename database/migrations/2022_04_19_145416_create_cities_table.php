@@ -15,10 +15,9 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('locality');
-            $table->string('administrative_area_level_3');
-            $table->foreignId('region_id');
+            $table->string('long_name');
+            $table->string('short_name');
+            $table->foreignId('region_id')->nullable();
             $table->foreign('region_id')->references('id')->on('regions')->cascadeOnDelete();
             $table->timestamps();
         });

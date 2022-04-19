@@ -15,13 +15,8 @@ class CreateRegionsTable extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('locality');
-            $table->string('sublocality');
-            $table->string('postal_code');
-            $table->string('country');
-            $table->string('administrative_area_level_1');
-            $table->string('administrative_area_level_2');
+            $table->string('long_name');
+            $table->string('short_name');
             $table->timestamps();
         });
     }

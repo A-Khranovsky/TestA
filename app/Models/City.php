@@ -10,8 +10,7 @@ class City extends Model
     use HasFactory;
 
     protected $fillable = [
-        'locality',
-        'administrative_area_level_3',
-        'name',
+        'long_name',
+        'short_name',
     ];
 }

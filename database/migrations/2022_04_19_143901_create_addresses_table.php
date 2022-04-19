@@ -15,8 +15,8 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->string('tatitude');
-            $table->string('tongitude');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->string('name');
             $table->foreignId('region_id')->nullable();
             $table->foreign('region_id')->references('id')->on('regions')->cascadeOnDelete();
