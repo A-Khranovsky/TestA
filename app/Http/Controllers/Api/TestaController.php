@@ -16,6 +16,10 @@ class TestaController extends Controller
 {
     public function getLocation(Request $request, GeocodingRestApiEngineinterface $geocodingRestApiEngine)
     {
+        $request->validate([
+            'latitude' =>'required|numeric',
+            'longitude' => 'required|numeric'
+        ]);
         event(new GetLocation($request->latitude, $request->longitude));
         return response($geocodingRestApiEngine
             ->getLocationData($request->latitude, $request->longitude), 200);
