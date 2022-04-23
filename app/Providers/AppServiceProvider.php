@@ -18,11 +18,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(GeoCodingRestApiEngineinterface::class, function () {
-            return new GeoCodingRestApiEngine
-            (
-             config('geocoding.url'),
-             config('geocoding.api_key')
-            );
+            return new GeoCodingRestApiEngine;
         });
 
         $this->app->singleton(DBEngineinterface::class, function () {

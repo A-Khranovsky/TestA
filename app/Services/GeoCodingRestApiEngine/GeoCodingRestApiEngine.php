@@ -9,10 +9,10 @@ class GeoCodingRestApiEngine implements GeocodingRestApiEngineinterface
     protected $url;
     protected $api_key;
 
-    public function __construct($url, $api_key)
+    public function __construct()
     {
-        $this->url = $url;
-        $this->api_key = $api_key;
+        $this->url = config('geocoding.url');
+        $this->api_key = config('geocoding.api_key');
     }
 
     public function getLocationData($latitude, $longitude)
