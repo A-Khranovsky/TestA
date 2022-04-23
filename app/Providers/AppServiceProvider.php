@@ -20,9 +20,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(GeoCodingRestApiEngineinterface::class, function () {
             return new GeoCodingRestApiEngine
             (
-             'https://maps.googleapis.com/maps/api/geocode/',
-             'json',
-             'AIzaSyDFCFhb1JgbGK5dbwdAcJbYE4rpnbDDRDI'
+             config('geocoding.url'),
+             config('geocoding.api_key')
             );
         });
 
