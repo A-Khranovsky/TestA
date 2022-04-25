@@ -12,6 +12,7 @@ class City extends Model
     protected $fillable = [
         'long_name',
         'short_name',
+        'region_id'
     ];
 
     public function region()

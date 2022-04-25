@@ -13,15 +13,11 @@ class Address extends Model
         'latitude',
         'longitude',
         'name',
+        'region_id'
     ];
 
     public function region()
     {
         return $this->belongsTo(Region::class);
-    }
-
-    public function pluscode()
-    {
-        return $this->belongsTo(Pluscode::class);
     }
 }

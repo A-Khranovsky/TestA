@@ -17,7 +17,7 @@ php artisan migrate
 ## Run http requests like thoes:
 * This requests will find the location by geografical coordinates:
 ```
-POST http://localhost:80/api/getLocation
+POST http://localhost:80/api/location/findout
 Content-Type: application/json
 Accept: application/json
 
@@ -30,13 +30,13 @@ Accept: application/json
 ```  
 * This request will find the another location by geografical coordinates:
 ```
-POST http://localhost:80/api/getLocation
+POST http://localhost:80/api/location/findout
 Content-Type: application/json
 Accept: application/json
 
 {
-  "latitude": " 40.755884",
-  "longitude": "-73.978504"
+  "latitude": " 37.386051",
+  "longitude": "-122.083855"
 }
 
 ###
@@ -45,7 +45,7 @@ Accept: application/json
 
 * This request will output all stored data:
 ```
-GET http://localhost:80/api/getRecords
+GET http://localhost:80/api/locations
 Accept: application/json
 
 ###

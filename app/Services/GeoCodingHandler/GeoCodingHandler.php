@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Services\GeoCodingRestApiEngine;
+namespace App\Services\GeoCodingHandler;
 
 
-class GeoCodingRestApiEngine implements GeocodingRestApiEngineinterface
+class GeoCodingHandler implements GeoCodingHandlerinterface
 {
     protected $url;
     protected $api_key;

@@ -1,24 +1,9 @@
 <?php
 
-use App\Http\Controllers\Api\TestaController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\MainController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::post('/getLocation', [TestaController::class, 'getLocation']);
-Route::get('/getRecords', [TestaController::class, 'getRecords']);
-Route::get('/region/{id}', [TestaController::class, 'getRecordsByRegionId']);
+Route::post('/location/findout', [MainController::class, 'findOutLocation']);
+Route::get('/locations', [MainController::class, 'index']);
+Route::resource('locations.region', MainController::class)
+    ->only('show')->shallow();

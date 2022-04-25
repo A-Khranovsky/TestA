@@ -2,11 +2,8 @@
 
 namespace App\Providers;
 
-use App\Listeners\TestaEngine;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+use App\Listeners\MainControllerSubscriber;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -19,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
     ];
 
     protected $subscribe = [
-        TestaEngine::class
+        MainControllerSubscriber::class
     ];
 
     /**

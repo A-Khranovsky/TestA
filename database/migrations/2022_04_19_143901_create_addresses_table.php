@@ -20,8 +20,6 @@ class CreateAddressesTable extends Migration
             $table->string('name');
             $table->foreignId('region_id')->nullable();
             $table->foreign('region_id')->references('id')->on('regions')->cascadeOnDelete();
-            $table->foreignId('pluscode_id')->nullable();
-            $table->foreign('pluscode_id')->references('id')->on('pluscodes')->cascadeOnDelete();
             $table->timestamps();
         });
     }
