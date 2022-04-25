@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Traits;
 
 trait GeoCodeParser
@@ -11,7 +10,7 @@ trait GeoCodeParser
         $stack = [];
         $result = [];
         array_walk_recursive($source, function ($item, $key)
-        use (&$param, &$stack, &$result, &$i) {
+ use (&$param, &$stack, &$result, &$i) {
             $stack[$i] = [$key, $item];
             if ($item === $param) {
                 if (count($result) == 0) {
@@ -30,7 +29,7 @@ trait GeoCodeParser
         $stack = [];
         $result = [];
         array_walk_recursive($source, function ($item, $key)
-        use (&$param, &$stack, &$result, &$i) {
+ use (&$param, &$stack, &$result, &$i) {
             $stack[$i] = [$key, $item];
             if ($key === 'formatted_address') {
                 if (count($result) == 0) {

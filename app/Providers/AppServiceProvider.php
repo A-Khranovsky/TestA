@@ -18,11 +18,11 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(GeoCodingHandlerinterface::class, function () {
-            return new GeoCodingHandler;
+            return new GeoCodingHandler();
         });
 
         $this->app->singleton(DBHandlerinterface::class, function () {
-            return new DBHandler;
+            return new DBHandler();
         });
     }
 

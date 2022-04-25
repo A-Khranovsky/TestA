@@ -12,11 +12,12 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function findOutLocation(Request $request,
-                                GeoCodingHandlerinterface $geoCodingHandler)
-    {
+    public function findOutLocation(
+        Request $request,
+        GeoCodingHandlerinterface $geoCodingHandler
+    ) {
         $request->validate([
-            'latitude' =>'required|numeric',
+            'latitude' => 'required|numeric',
             'longitude' => 'required|numeric'
         ]);
         $response = $geoCodingHandler

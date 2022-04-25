@@ -10,8 +10,8 @@ class RegionsCollection extends JsonResource
     public function toArray($request)
     {
         return [
-            'long_name'=>$this->long_name,
-            'short_name'=>$this->short_name,
+            'long_name' => $this->long_name,
+            'short_name' => $this->short_name,
         ];
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services\DBHandler;
-
 
 use App\Models\Address;
 use App\Models\City;
@@ -12,6 +10,7 @@ use App\Traits\GeoCodeParser;
 class DBHandler implements DBHandlerinterface
 {
     use GeoCodeParser;
+
     public function storeLocation(array $haystack, string $latitude, string $longitude)
     {
         $location = $this->findLocation($haystack, 'administrative_area_level_1');
@@ -34,6 +33,5 @@ class DBHandler implements DBHandlerinterface
             'name' => $address['formatted_address'],
             'region_id' => $region->id
         ]);
-
     }
 }
