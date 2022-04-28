@@ -11,6 +11,10 @@ docker-compose up -d
 ## Go to the container
 docker exec -it testa_php-apache_1 bash
 
+## Modify .env file. Set  
+GEOCODING_URL=https://maps.googleapis.com/maps/api/geocode/json (Or similar. Learn Geocoding docs)
+GEOCODING_API_KEY=API_key
+
 ## Run migration (to create DB)
 php artisan migrate
 
