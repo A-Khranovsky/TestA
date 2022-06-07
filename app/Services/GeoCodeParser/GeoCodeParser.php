@@ -4,7 +4,7 @@
 namespace App\Services\GeoCodeParser;
 
 
-class GeoCodeParser
+class GeoCodeParser implements GeoCodeParserinterface
 {
     public function findLocation(array $source, string $param)
     {
