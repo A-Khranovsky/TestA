@@ -3,15 +3,16 @@
 namespace App\Listeners;
 
 use App\Events\LocationStoreEvent;
-use App\Services\DBHandler\DBHandlerinterface;
+use App\Services\DBHandler\DBHandler;
 
 class MainControllerSubscriber
 {
     private $DBHandler;
 
-    public function __construct(DBHandlerinterface $DBHandler)
+    public function __construct(DBHandler $DBHandler)//(DBHandlerinterface $DBHandler)
     {
         $this->DBHandler = $DBHandler;
+
     }
 
     public function handleStoreLocation($event)
